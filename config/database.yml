@@ -23,7 +23,7 @@ default: &default
 
 development:
   <<: *default
-  url: <%= ENV['DATABASE_URL'] %>
+  url: <%= ENV['postgres://mysite:Rcr1okKliRZWoPTz4Oq7lFIW5QZayy78@dpg-ciq8s9mnqql4qa4m51lg-a/mysite_jcgd'] %>
   #database: Crazy4Cats_development
 
   # The specified database role being used to connect to postgres.
