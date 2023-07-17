@@ -1,18 +1,18 @@
 databases:
-  - name: crazy4cats
-    databaseName: crazy4
+  - name: mysite
+    databaseName: mysite
     user: mysite
 
 services:
   - type: web
-    name: crazy4cats
+    name: mysite
     runtime: ruby
     buildCommand: "./bin/render-build.sh"
     startCommand: "bundle exec puma -C config/puma.rb"
     envVars:
-      - key: postgres://mysite:Omkm0r9xmKO5B1Yq4FACSywqRqCCd1aD@dpg-ciq6qjunqql4qa4agshg-a/crazy4
+      - key: DATABASE_URL
         fromDatabase:
           name: mysite
           property: connectionString
-      - key: 5c22121848b017506398519bf050cc28
+      - key: RAILS_MASTER_KEY
         sync: false
